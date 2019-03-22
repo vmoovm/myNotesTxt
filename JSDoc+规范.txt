@@ -1,0 +1,28 @@
+@constructor 使用@constructor可以标识一个函数是构造函数
+@alias 使用@alias可以给一个变量或者函数指定一个别名，代码提示时会提示该别名
+@description 使用@description可以在代码提示时显示被描述变量或者函数的描述信息。
+@example 使用@example可以提示代码示例。
+@extends 使用@extends用于标识继承于某个类型。
+@param 使用@param可以描述一个函数的参数以及参数类型
+@property 使用@property可以描述一个对象的属性
+@return 使用@return可以描述一个对象的属性
+@type 使用@type可以定义某个变量的类型
+
+HBuilder为了对一些比较特殊的类型列表进行更智能的提示（比如id列表、样式列表、颜色列表、图片列表...的提示），特别定义了一批特殊类型列表。下面是扩展的各种类型的名字一览表。
+IDString : 提示id的列表
+ClassString : 提示class的列表
+TagString : 提示html标签(tag)的列表
+AttrString : 提示html标签属性的列表
+AttrValueString : 提示html标签属性值域的列表
+cssPropertyString : 提示css属性的列表
+cssPropertyValueString : 提示css属性值域的列表
+HTMLString : 能够支持在该字符串内部写html代码
+CSSString : 能够支持在该字符串内部写css代码
+URIString : 提示项目下所有文件的列表
+ImageURIString : 提示项目下所有图片的列表
+JSURIString : 提示项目下所有JS文件的列表
+CSSURIString : 提示项目下所有CSS文件的列表
+MultimediaString : 提示多媒体文件的列表
+ColorString : 提示颜色的列表
+FontString : 提示预置的字体列表
+EventString : 提示事件名称的列表

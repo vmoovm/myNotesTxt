@@ -1,0 +1,59 @@
+﻿◆DedeCMS二次开发
+　　为了让更多人了解二次开发，并更方便的了解DedeCMS的二次开发，下面将会简单的介绍关于DedeCMS二次开
+发的一些基础和大纲
+
+　　DedeCMS二次开发必备基础：
+　　· 非常熟悉HTML
+　　· 熟悉DIV+CSS的布局
+　　· 扎实的PHP基础，熟悉结构化编程，了解OOP，并能看懂和使用
+　　· 熟悉MYSQL，掌握SQL语言
+
+　　DedeCMS二次开发学习过程
+　　· 理解CMS是什么
+　　· 熟悉DedeCMS的功能(如：栏目的分类，文档管理，模型的使用，系统的设置等常用的功能)
+　　· 掌握DedeCMS的模板标签使用及原理
+　　· DedeCMS目录结构分析
+
+　　熟悉每个文件夹里面主要装什么文件，这样在二次开发的时候知道在哪个文件夹下的什么文件修改
+　　目录结构摘要：
+　　./a 生成文件存放路径
+　　./data 缓存文件及数据中心
+　　/admin 管理后台数据
+　　/backupdata 备份数据
+　　/cache 缓存文件
+　　/enums 级别联动数据，JS，枚举类型的缓存文件
+　　/js 常用的JS
+　　/mark 水印相关文件
+　　/module 模块安装文件
+　　/rss Rss相关
+　　/sessions Session 存放路径
+　　/textdata 文本数据
+　　/tplcache 模板缓存
+　　/uploadtmp 上传文件缓存位置
+　　/ziptmp zip包解压缓存位置
+　　……
+
+　　DedeCMS文件结构分析
+　　熟悉每个文件的基本功能，方便做修改,知道每个文件的大概作用之后,可以方便的对文件进行修改
+　　文件结构摘要：
+　　common.inc.php 数据库配置文件
+　　config.cache.bak.php 后台系统配置备份
+　　config.cache.inc.php 后台系统配置文件缓存
+　　downmix.data.php 采集混淆缓存文件
+　　mysql_error_track.inc MYSQL错误??志
+　　safequestions.php 安全问题
+　　sitemap.html 站点地图
+　　sys_pay.cache.php 支付网关配置
+　　template.rand.php 随机模板设置
+　　……
+
+　　· DedeCMS数据库结构分析，至少要熟悉每个表的作用
+　　熟悉每个表的作用，了解几个核心表的设计及字段的含义，方便拿到新的需求之后，能快速的判断是否加字
+段，还是新建表来处理。同时也能理解DedeCMS的数据库设计思想，把有用的设计思路加到自己的系统中。
+
+　　· DedeCMS的流程控制，及一些核心文件的解析
+　　熟悉一些登陆，注册，文档管理，权限控制，分类管理，模型设置等一些常用流程控制。对几个核心文件进
+行解剖，了解其编程技巧及安全机制
+
+　　· DedeCMS插件的开发(****式插件和内嵌式插件)
+　　熟悉两种插件的编写，插件的导入导出，插件搭配模型的使用

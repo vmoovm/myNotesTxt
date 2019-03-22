@@ -1,0 +1,9 @@
+<script type="text/javascript">
+		$("#aaa").click(function(){
+			var  top =$("#a").offset().top;
+			if(top < 0) {
+				top = $("#scroll").scrollTop() + top
+			}
+			$("#scroll").animate({scrollTop: top + "px"}, 550);
+		})
+	</script>

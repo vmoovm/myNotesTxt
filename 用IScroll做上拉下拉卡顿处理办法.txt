@@ -1,0 +1,15 @@
+用Iscroll做的上拉下拉在仅在IOS手机和PC流畅，在Andorid系统会卡顿，解决办法可以用JRoll.js用法/参数和Iscroll一模一样
+可以理解JRoll就是Iscroll复制版
+
+JRoll，一款能滚起上万条数据，具有滑动加速、回弹、缩放、滚动条、滑动事件等功能，兼容CommonJS/AMD/CMD模块规范，开源，免费的轻量级html5滚动插件。
+JRoll第二版是在JRoll第一版基础上重写JRoll滑动算法，基于时间运动，解决帧频降低时滑动缓慢的问题，更改垂直水平方向判断方法，使捕获垂直水平方向更准确灵敏。
+JRoll第二版增减了一些api不完全兼容JRoll第一版。
+
+实例：
+http://www.chjtx.com/JRoll/demos/
+
+
+JRoll API文档：
+http://www.chjtx.com/JRoll/
+http://www.chjtx.com/JRoll/#extends
+https://github.com/chjtx/JRoll/blob/master/README-LITE.md

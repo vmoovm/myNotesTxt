@@ -1,0 +1,1 @@
+输入框文字与内联标签 使用vertical-align:middle;不能水平对齐，原因：去掉空格，使用paddding间距代替手动空格

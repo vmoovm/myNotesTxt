@@ -1,0 +1,9 @@
+前端坑：
+http://blog.csdn.net/libin_1/article/details/52091149
+
+HTML5中div、article、section的区别及使用介绍
+http://www.jb51.net/html5/97873.html
+
+
+灾难片50部
+http://kan.sogou.com/dianying/zainan-meiguo--new-/

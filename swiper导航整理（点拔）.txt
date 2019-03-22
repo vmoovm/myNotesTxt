@@ -1,0 +1,42 @@
+﻿
+
+<script type="text/javascript">
+	// 每道题序号（导航）
+	var zcheckTopic = new Swiper('#zcheckTopic',{
+		watchSlidesProgress : true,
+		watchSlidesVisibility : true,
+		slidesPerView : 8,
+		hashnav:true,
+		onTap: function(){
+			ztopicOptions.slideTo( zcheckTopic.clickedIndex)
+		}
+	});
+	//每一道题
+	var ztopicOptions = new Swiper('#ztopicOptions',{
+		watchActiveIndex : true,
+		preventLinksPropagation : false,
+		longSwipesRatio:0.6,
+		//noSwiping : true,
+		hashnav:true,
+		onSlideChangeStart: function(swiper){
+			updateNavPosition(swiper.activeIndex);
+		}
+
+		
+	});
+	
+	function updateNavPosition(activeIndex){
+		$('#zcheckTopic .active-nav').removeClass('active-nav')
+		var activeNav = $('#zcheckTopic .swiper-slide').eq(activeIndex).addClass('active-nav');
+		
+		if (!activeNav.hasClass('swiper-slide-visible')) {
+			if (activeNav.index()>zcheckTopic.activeIndex) {
+				var thumbsPerNav = Math.floor(zcheckTopic.width/activeNav.width())-1
+				zcheckTopic.slideTo(activeNav.index()-thumbsPerNav)
+			}
+			else {
+				zcheckTopic.slideTo(activeNav.index())
+			}	
+		}
+	}
+</script>

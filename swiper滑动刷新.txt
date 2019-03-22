@@ -1,0 +1,47 @@
+思路：
+只放一个方向滑动，可以当作滑动刷新。
+
+
+	<div id="resh">
+		<ul class="zloadingMore">
+			<li class="loading"></li>
+			<li class="load_text">刷新中</li>
+		</ul>
+	</div>
+	<div class="swiper-container" id="update">
+		<div class="swiper-scrollbar"></div>
+		<div class="swiper-wrapper">
+			<div class="swiper-slide"></div>
+		</div>
+	</div>
+
+<script type="text/javascript">
+	var mySwiper = new Swiper('#update', {  
+        scrollbar: '.swiper-scrollbar',  
+        direction: 'vertical',  
+        slidesPerView: 'auto',  
+        mousewheelControl: true,  
+        freeMode: true,  
+        onTouchEnd: function(swiper){  
+            if(swiper.translate>60){ //判断下拉刷新  
+            	$('#resh').show();
+            	//$('.uptipsgray').addClass('visible');//下拉刷新的div显示  
+                //loadNewData();//加载更多数据  
+        	}  
+            else if(swiper.translate<-40){ //判断上拉加载新数据  
+            	if(mySwiper.isEnd){
+               		//mySwiper.isEnd这个函数用来判断时候滑动到底部，但是不能单独的用这个来写，还需要在外层写一个swiper.translate<-40，是为了需要先判断是手势是上拉还是下拉，否则可能造成了点击页面，还没设计到上下拉就执行里面的函数了，这里的40也不                  是固定的，只是为了先判断手势方向，再判断是否到底  
+                	//$('#resh').show();
+	                //$('.tipsgray').addClass('visible');  
+                    //loadHistoryData();  
+                }  
+            }  
+        },
+        onLazyImageLoad: function(swiper, slide, image){
+	    	alert('延迟加载图片，加载完后会触发');
+	    	console.log(swiper);//Swiper实例
+	    	console.log(slide);//哪个slide里面的图片在加载
+	    	console.log(image);//哪个图片在加载
+	    }
+    });  
+</script>
